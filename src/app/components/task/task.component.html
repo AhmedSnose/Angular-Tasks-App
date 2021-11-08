@@ -1,0 +1,15 @@
+<div *ngIf='!taskId'>
+    <p class="alert alert-danger">
+        Can't Find Mathced Id
+    </p>
+</div>
+
+<div *ngIf='taskId'>
+    
+<input type="text" class="form-control" placeholder="task title" [(ngModel)]='task.title' />
+<textarea class="form-control" placeholder='description' [(ngModel)]='task.description'> </textarea>
+<button class="btn btn-primary" (click)='saveTask()'> Save</button>
+<button class="btn btn-danger" (click)='DeleteTask()'> delet</button>
+<a routerLink="/" class="btn btn-danger">cancel</a>
+
+</div>
